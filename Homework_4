@@ -1,0 +1,36 @@
+# Իրականացնել ծրագիր, որում պետք է ստեղծել ցուցակ(list),  բաղկացած 100-ից 1000-ի միջև
+# ընկած բոլոր պալինդրոմային թվերից՝ օգատգործելով list-ի comprehension։
+
+palindrome_numbers = [i for i in range(100, 1001) if str(i) == str(i)[::-1]]
+print(palindrome_numbers)
+
+# Գրել ծրագիր, որը կստուգի մուտքային թիվը երկուսի աստիճան է, թե՝ ոչ։
+
+entered_num = int(input("Enter a number: "))
+if (entered_num ** 0.5) % 2 == 0:
+    print("The number is a power of two.")
+else:
+    print("The number is not a power of two.")
+
+# Իրականացնել ծրագիր, որը շրջում է մատրիցը 180 աստիճանով։
+a = [[1, 2, 3, 4],
+     [5, 6, 7, 8],
+     [9, 10, 11, 12],
+     [13, 14, 15, 16]]
+a.reverse()
+[i.reverse() for i in a]
+print(a)
+
+# Ունենք ամբողջ թվերից բաղկացած մատրից, որի վրա պետք է իրականացնել transpose։
+# Transpose կատարել նշանակում է մատրիցի տողերը փոխադրել սյուներով։
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix1 = [[matrix[i][j] for i in range(len(matrix))] for j in range(len(matrix[0]))]
+print(matrix1)
+
+# Գրել ծրագիր, որը որպես մուտքային արժեք կստանա ամբողջ թիվ և կարտածի նրանում պարունակվող ‘1’ բիթերի քանակը։
+
+number = int(input("Enter a number: "))
+count_1 = str(bin(number)).count("1")
+print(count_1)
+
